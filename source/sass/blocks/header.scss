@@ -1,0 +1,117 @@
+.header {
+  background: url("../img/hero-bg.png") $color-text2;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 33px;
+
+  @media (max-width: $desktop) {
+    padding-top: 21px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 16px;
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  
+  @media (max-width: $desktop) {
+    padding: 0 25px;
+  }
+  
+  @media (max-width: $desktop) {
+    padding: 0 15px;
+  }
+}
+
+.header__logo-link {
+  margin-right: auto;
+
+  @media (max-width: $tablet) {
+    .logo__title,
+    .logo__subtitle {
+      display: none;
+    }
+  }
+
+  & img {
+    @media (max-width: $tablet) {
+      width: 38px;
+      height: 38px;
+    }
+  }
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__item {
+  &:not(:last-child) {
+    margin-right: 88px;
+
+    @media (max-width: $desktop) {
+      margin-right: 33px;
+    }
+
+    @media (max-width: $tablet) {
+      margin-right: 23px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    transform: translateY(-5px);
+  }
+}
+
+.header__icon-link {
+  fill: #00b2ff;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: $desktop) {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.header__link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 18px;
+  transition: all 0.3s ease-in-out;
+
+  span {
+    margin-left: 16px;
+
+    @media (max-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    color: lighten($color-accent, 20);
+    
+    & .header__icon-link {
+      transition: all 0.3s ease-in-out;
+      fill: lighten($color-accent, 20);
+    }
+  }
+}
+
+.header__callback {
+  margin-left: 50px;
+
+  @media (max-width: $desktop) {
+    display: none;
+  }
+}

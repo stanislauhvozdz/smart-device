@@ -1,0 +1,118 @@
+.form {
+  z-index: 3;
+  color: $color-white;
+  max-width: 570px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;
+
+  @media (max-width: $desktop) {
+    gap: 43px 30px;
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}
+
+.form input,
+.form textarea {
+  background-color: rgba($color-white, 0.1);
+  border: none;
+  padding: 14px 16.5px;
+  color: inherit;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+
+  &::placeholder {
+    color: $color-white;
+  }
+
+  &:hover,
+  &:focus-within {
+    outline: 1px solid $color-white;
+  }
+}
+
+.form textarea {
+  grid-column: 1 / -1;
+  resize: none;
+  min-height: 154px;
+  margin-bottom: 3px;
+
+  @media (max-width: $desktop) {
+    min-height: 159px;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $tablet) {
+    min-height: 104px;
+    margin-bottom: 0;
+  }
+}
+
+.form__field {
+  &:hover,
+  &:focus-within {
+    outline: 1px solid $color-white;
+  }
+
+  @media (max-width: $tablet) {
+    transform: translateY(-19px);
+  }
+}
+
+.form__field input{
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  width: auto;
+
+  &:checked + span::before {
+    background-image: url("../img/icons/check.svg");
+  }
+}
+
+.form__field span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-left: 43px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 11px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border: 1px solid $color-white;
+    margin-right: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+
+    @media (max-width: $tablet) {
+      left: 1px;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding-left: 33px;
+  }
+}
+
+.form button {
+  width: 100%;
+  border: 1px solid $color-white;
+}

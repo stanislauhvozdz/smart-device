@@ -1,0 +1,81 @@
+.good {
+  position: relative;
+  overflow: hidden;
+
+  &:hover,
+  &:focus-within {
+    & > .good__image {
+      opacity: 1;
+    }
+  }
+  
+  &:focus-within {
+    box-shadow: 1px 1px 10px 1px $color-white;
+  }
+}
+
+.good__image {
+  opacity: 0.2;
+  transition: all 0.3s ease-in-out;
+
+  @media (max-width: $desktop) {
+    height: 256px;
+  }
+}
+
+.good__image img{
+  object-fit: cover;
+}
+
+.good h3 {
+  position: absolute;
+  top: 52px;
+  left: 45px;
+  font-family: "Roboto Condensed";
+  font-size: 20px;
+  line-height: 30px;
+  width: 220px;
+  margin: 0;
+  font-weight: 400;
+  width: 160px;
+
+  @media (max-width: $desktop) {
+    top: 42px;
+  }
+
+  @media (max-width: $tablet) {
+    top: 19px;
+    left: 35px;
+  }
+}
+
+.good a {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 61px;
+  height: 61px;
+  background-color: $color-accent;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1000px;
+    height: 1000px;
+    cursor: pointer;
+    right: -600px;
+    top: -700px;
+  }
+}
+
+.good__icon-link {
+  fill: $color-white;
+  height: 10px;
+}

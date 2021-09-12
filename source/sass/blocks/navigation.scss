@@ -1,0 +1,19 @@
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 70px;
+
+  @media (max-width: $desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.navigation__link {
+  font-size: 15px;
+  line-height: 25px;
+  color: rgba($color-text2, 0.5);
+  text-decoration: none;  
+}

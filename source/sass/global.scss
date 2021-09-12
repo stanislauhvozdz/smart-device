@@ -1,0 +1,135 @@
+body {
+  font-family: $ff-primary;
+  font-size: 16px;
+  color: $color-white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  // height: 100%;
+  object-fit: cover;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+// - мобильная версия — 320px - 767px;
+// - планшетная версия — 768px - 1023px;
+// - десктопная версия — от 1024px и выше
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  &--xl {
+    max-width: 1440px;
+  }
+}
+
+.button {
+  font-family: "Roboto Condensed";
+  font-weight: $color-white;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: transparent;
+  height: 45px;
+  width: 180px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 12px 8px;
+  border-radius: 5px;
+  border: 1px solid $color-white;
+  transition: all 0.3s ease-in-out;
+
+  &--accent {
+    border-color: $color-accent;
+    color: $color-accent;
+  }
+  
+  &--dark {
+    &:hover {
+      border-color: $color-dark;
+      color: $color-dark;
+    }
+  }
+
+  &--main {
+    background-color: $color-accent;
+    border-color: $color-accent;
+    width: 407px;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-accent;
+    }
+
+    @media (max-width: $desktop) {
+      width: 396px;  
+    }
+
+    @media (max-width: $tablet) {
+      transform: translateY(-5px); 
+    }
+  }
+
+
+  &:hover {
+    color: $color-accent;
+    border-color: $color-accent;
+  }
+}
+
+.section-title {
+  font-family: "Roboto Condensed";
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin: 0;
+
+  @media (max-width: $desktop) {
+    font-size: 32px;
+    line-height: 140.62%;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 28px;
+  }
+}
+
+._active {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}

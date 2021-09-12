@@ -1,0 +1,32 @@
+.logo {
+  height: 52px;
+  width: 202px;
+  display: block;
+
+  @media (max-width: $tablet) {
+    width: 189px;
+  }
+}
+
+.logo__img {
+  float: left;
+  margin-right: 16px;
+}
+
+.logo__title {
+  padding: 0;
+  padding-top: 5px;
+  margin: 0;
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.logo__subtitle {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-dark;
+}

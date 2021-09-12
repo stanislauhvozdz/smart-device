@@ -1,0 +1,94 @@
+.card {
+  padding: 40px 43px 49px;
+  border: 1px solid $color-line;
+  border-left: 3px solid $color-accent;
+  height: 100%;
+  min-height: 299px;
+
+  @media (max-width: $desktop) {
+    height: auto;
+    min-height: 233px;
+    padding: 24px 17px 19px 27px;
+  }
+
+  @media (max-width: $tablet) {
+    height: auto;
+    min-height: 233px;
+    padding: 24px 17px 25px 22px;
+
+    &--full {
+      padding: 24px 10px 25px 22px;
+    }
+  }
+}
+
+.card__img {
+  fill: $color-accent;
+  margin-bottom: 15px;
+
+  @media (max-width: $desktop) {
+    margin-bottom: 3px;
+  }
+
+  @media (max-width: $tablet) {
+    margin-bottom: 10px;
+    // width: 31px;
+    // height: 31px;
+
+    &--stopwath {
+      width: 29px;
+      height: 36px;
+    }
+
+    &--hired {
+      width: 32px;
+      height: 32px;
+    }
+
+    &--detective {
+      width: 30px;
+      height: 26px;
+    }
+
+    &--tag {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.card h3 {
+  font-family: "Roboto Condensed";
+  font-size: 24px;
+  line-height: 34px;
+  color: $color-accent;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (max-width: $desktop) {
+    margin: 0 0 9px;
+  }
+
+  @media (max-width: $tablet) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140.62%;
+    margin-bottom: 7px;
+  }
+}
+
+.card p {
+  font-family: inherit;
+  color: $color-text;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (max-width: $desktop) {
+    margin: 0;
+  }
+
+  @media (max-width: $tablet) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
