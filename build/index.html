@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru" class="page">
 
 <head>
   <meta charset="UTF-8">
@@ -40,7 +40,7 @@
           </a>
         </li>
       </ul>
-      <button class="header__callback button" type="button">Заказать звонок</button>
+      <button class="header__callback button" type="button" id="popup-show">Заказать звонок</button>
     </div>
   </header>
 
@@ -53,8 +53,10 @@
           <div class="hero__body">
             <h1 class="hero__title">Печатные платы</h1>
             <p class="hero__subtitle"> производство и монтаж, поставка комплектующих, блоков и модулей</p>
-            <button class="hero__advice button button--main"><span class="hero__advice--full">Получить бесплатную консультацию</span><span class="hero__advice--short">Бесплатная консультация</span></button>
+            <a href="#r1" class="hero__advice button button--main"><span class="hero__full">Получить бесплатную
+                консультацию</span><span class="hero__short">Бесплатная консультация</span></a>
           </div>
+          <a href="#r2" class="hero__scroll">Скролл вниз</a>
         </div>
       </div>
       <div class="hero__image">
@@ -66,7 +68,7 @@
       </div>
     </section>
 
-    <section class="features">
+    <section class="features" id="r2">
       <h2 class="visually-hidden">Преимущества нашей компании</h2>
       <div class="container features__container">
         <ul class="features__list">
@@ -149,7 +151,7 @@
               </div>
               <h3>Производство печатных плат</h3>
               <a href="#" aria-label="Перейти к покупке">
-                <svg class="good__icon-link" width="6" heigth="10">
+                <svg class="good__icon-link">
                   <use xlink:href="img/sprite.svg#next"></use>
                 </svg>
               </a>
@@ -167,7 +169,7 @@
               </div>
               <h3>Монтаж печатных плат</h3>
               <a href="#" class="good__link" aria-label="Перейти к покупке">
-                <svg class="good__icon-link" width="6" heigth="10">
+                <svg class="good__icon-link">
                   <use xlink:href="img/sprite.svg#next"></use>
                 </svg>
               </a>
@@ -185,7 +187,7 @@
               </div>
               <h3>Комплектующие для светотехники</h3>
               <a href="#" aria-label="Перейти к покупке">
-                <svg class="good__icon-link" width="6" heigth="10">
+                <svg class="good__icon-link">
                   <use xlink:href="img/sprite.svg#next"></use>
                 </svg>
               </a>
@@ -195,7 +197,7 @@
       </div>
     </section>
 
-    <section class="questions">
+    <section class="questions" id="r1">
       <div class="container questions__container">
         <div class="questions__body">
           <h2 class="questions__title section-title">Остались вопросы? Задайте их нам!</h2>
@@ -256,7 +258,9 @@
       </div>
       <div class="footer__information">
         <div class="footer__site-nav">
-          <h2 class="footer__title" id="nav">Разделы сайта</h2>
+          <h2 class="footer__title">Разделы сайта
+            <button type="button" class="footer__toogle" id="nav"></button>
+          </h2>
           <nav class="navigation">
             <ul class="navigation__list">
               <li class="navigation__item">
@@ -283,11 +287,13 @@
             </ul>
           </nav>
         </div>
-        <div class="footer__contact-details">
-          <h2 class="footer__title" id="adres">Наш офис</h2>
+        <div class="footer__contact-details contact-details">
+          <h2 class="footer__title">Наш офис
+            <button type="button" class="footer__toogle" id="adres"></button>
+          </h2>
           <ul class="contact-details__list">
             <li class="contact-details__item">
-              <a class="contact-details__link" href="http://maps.google.com/?ll=55.916354318272326, 37.772083997130835"
+              <a class="contact-details__link" href="http://maps.google.com/?ll=55.916354318272326,37.772083997130835"
                 target="_blank">
                 г. Мытищи, Олимпийский проспект,д.10</a>
             </li>
@@ -311,7 +317,33 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+
+
+  <section class="popup">
+    <div class="popup__overlay">
+      <div class="popup__content">
+        <button class="popup__close" aria-label="Закрыть окно"></button>
+        <h2 class="popup__title section-title">Закажите звонок!</h2>
+        <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <form class="form" action="#" method="POST">
+            <label for="popup-name" class="visually-hidden"></label>
+            <input id="popup-name" name="name" type="text" placeholder="Имя" required>
+            <label for="popup-phone" class="visually-hidden"></label>
+            <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required>
+            <label for="popup-question-value" class="visually-hidden"></label>
+            <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
+            <button type="submit" class="button button--main">Задать вопрос</button>
+            <label class="form__field form__field--checkbox">
+              <input type="checkbox" required>
+              <span>Я согласен на обработку персональных данных</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    
+  </section>
+  <script src="js/main.js">
+  </script>
 </body>
 
 </html>

@@ -31,6 +31,7 @@
 
 .hero__body {
   width: 80%;
+  position: relative;
 
   @media (max-width: $desktop) {
     width: 70%;
@@ -119,10 +120,9 @@
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
-
-  &--short {
-    display: none;
-  }
+  // display: inline-block;
+  // vertical-align: middle;
+  text-decoration: none;
 
   @media (max-width: $desktop) {
     margin-left: 47px;
@@ -132,14 +132,36 @@
   @media (max-width: $tablet) {
     margin-left: 0;
     width: 100%;
+  }
+}
 
-    &--full {
-      display: none;
-    }
+@media (min-width: $tablet) {
+  .hero__full {
+    display: block;
+  }
 
-    &--short {
-      display: block;
-    }
+  .hero__short {
+    display: none;
+  }
+}
+
+.hero__scroll {
+  color: rgba($color-white, 0.5);
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 736px;
+  left: 20.7%;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:focus-within,
+  &:hover {
+    color: $color-accent;
+  }
+
+  @media (max-width: $desktop) {
+    display: none;
   }
 }
 
