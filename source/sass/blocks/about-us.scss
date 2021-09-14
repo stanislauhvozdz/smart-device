@@ -20,7 +20,7 @@
 
   @media (max-width: $desktop) {
     padding-left: 212px;
-    background-position: 0px -2px;
+    background-position: 0 -2px;
     background-repeat: no-repeat;
     background-image: url("../img/2005-big.png");
   }
@@ -31,7 +31,7 @@
   }
 }
 
-.about-us__title {
+.about-us h2 {
   margin-bottom: 22px;
 
   @media (max-width: $desktop) {
@@ -43,12 +43,12 @@
   }
 }
 
-.about-us__text {
+.about-us p {
   padding: 0;
   margin: 0;
   font-size: 16px;
   line-height: 22px;
-  
+
   &:not(:last-child) {
     margin-bottom: 20px;
 
@@ -69,6 +69,7 @@
 
   @media (max-width: $tablet) {
     transform: translateX(2px);
+
     &:last-of-type {
       height: 175px;
       margin-bottom: 0;

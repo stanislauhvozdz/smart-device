@@ -62,7 +62,7 @@
       <div class="hero__image">
         <picture>
           <!-- 1x: 705px; 2x: 1410px -->
-          <source srcset="img/plate@1x.webp 1x, img/plate@1x2x.webp 2x" type="image/webp">
+          <source srcset="img/plate@1x.webp 1x, img/plate@2x.webp 2x" type="image/webp">
           <img src="img/plate@1x.png" srcset="img/plate@2x.png 2x" alt="Стопка микросхем" width="705" height="515">
         </picture>
       </div>
@@ -121,11 +121,11 @@
 
     <section class="about-us">
       <div class="container about-us__container">
-        <h2 class="about-us__title section-title">О компании</h2>
-        <p class="about-us__text">Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
+        <h2 class="section-title">О компании</h2>
+        <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
           мировые технологии с 1997
           года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-        <p class="about-us__text">
+        <p>
           Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
           платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
           РоссАвтоПрома
@@ -144,14 +144,14 @@
               <div class="good__image">
                 <picture>
                   <!-- 1x: 370px; 2x: 1240px -->
-                  <source srcset="img/goods-1@1x.webp 1x, img/goods-1@1x2x.webp 2x" type="image/webp">
+                  <source srcset="img/goods-1@1x.webp 1x, img/goods-1@2x.webp 2x" type="image/webp">
                   <img class="img" src="img/goods-1@1x.png" srcset="img/goods-1@2x.png 2x" alt="Печатная плата"
                     width="370" height="620">
                 </picture>
               </div>
               <h3>Производство печатных плат</h3>
               <a href="#" aria-label="Перейти к покупке">
-                <svg class="good__icon-link">
+                <svg class="good__icon-link" width="5" height="8">
                   <use xlink:href="img/sprite.svg#next"></use>
                 </svg>
               </a>
@@ -162,14 +162,14 @@
               <div class="good__image">
                 <picture>
                   <!-- 1x: 370px; 2x: 1240px -->
-                  <source srcset="img/goods-2@1x.webp 1x, img/goods-2@1x2x.webp 2x" type="image/webp">
+                  <source srcset="img/goods-2@1x.webp 1x, img/goods-2@2x.webp 2x" type="image/webp">
                   <img class="img" src="img/goods-2@1x.png" srcset="img/goods-2@2x.png 2x"
                     alt="Процесс монтажа печатных плат" width="370" height="620">
                 </picture>
               </div>
               <h3>Монтаж печатных плат</h3>
               <a href="#" class="good__link" aria-label="Перейти к покупке">
-                <svg class="good__icon-link">
+                <svg class="good__icon-link" width="5" height="8">
                   <use xlink:href="img/sprite.svg#next"></use>
                 </svg>
               </a>
@@ -180,14 +180,14 @@
               <div class="good__image">
                 <picture>
                   <!-- 1x: 370px; 2x: 1240px -->
-                  <source srcset="img/goods-3@1x.webp 1x, img/goods-3@1x2x.webp 2x" type="image/webp">
+                  <source srcset="img/goods-3@1x.webp 1x, img/goods-3@2x.webp 2x" type="image/webp">
                   <img class="img" src="img/goods-3@1x.png" srcset="img/goods-3@2x.png 2x" alt="Светодиодная лента"
                     width="370" height="620">
                 </picture>
               </div>
               <h3>Комплектующие для светотехники</h3>
               <a href="#" aria-label="Перейти к покупке">
-                <svg class="good__icon-link">
+                <svg class="good__icon-link" width="5" height="8">
                   <use xlink:href="img/sprite.svg#next"></use>
                 </svg>
               </a>
@@ -204,11 +204,11 @@
           <p class="questions__subtitle">Мы проконсультируем Вас бесплатно</p>
           <div class="questions__form">
             <form class="form" action="#" method="POST">
-              <label for="name" class="visually-hidden"></label>
+              <label for="name" class="visually-hidden">Имя</label>
               <input id="name" name="name" type="text" placeholder="Имя" required>
-              <label for="phone" class="visually-hidden"></label>
+              <label for="phone" class="visually-hidden">Телефон</label>
               <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
-              <label for="question-value" class="visually-hidden"></label>
+              <label for="question-value" class="visually-hidden">Ваш вопрос</label>
               <textarea id="question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
               <button type="submit" class="button button--main">Задать вопрос</button>
               <label class="form__field form__field--checkbox">
@@ -326,11 +326,11 @@
         <h2 class="popup__title section-title">Закажите звонок!</h2>
         <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form class="form" action="#" method="POST">
-            <label for="popup-name" class="visually-hidden"></label>
+            <label for="popup-name" class="visually-hidden">Имя</label>
             <input id="popup-name" name="name" type="text" placeholder="Имя" required>
-            <label for="popup-phone" class="visually-hidden"></label>
+            <label for="popup-phone" class="visually-hidden">Телефон</label>
             <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required>
-            <label for="popup-question-value" class="visually-hidden"></label>
+            <label for="popup-question-value" class="visually-hidden">Ваш вопрос</label>
             <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
             <button type="submit" class="button button--main">Задать вопрос</button>
             <label class="form__field form__field--checkbox">

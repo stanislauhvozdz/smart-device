@@ -48,7 +48,7 @@
 .hero__title {
   margin: 0;
   margin-bottom: 24px;
-  font-family: "Roboto Condensed";
+  font-family: $ff-third;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -77,13 +77,12 @@
   padding: 0;
   padding-left: 94px;
   position: relative;
-  font-family: "PTMono";
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
   line-height: 156.8%;
   max-width: 718px;
-  
+
 
   &::before {
     position: absolute;
@@ -92,7 +91,7 @@
     height: 2px;
     background-color: $color-white;
     top: 20px;
-    left: 0; 
+    left: 0;
 
     @media (max-width: $desktop) {
       width: 33px;
@@ -120,8 +119,6 @@
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.05em;
-  // display: inline-block;
-  // vertical-align: middle;
   text-decoration: none;
 
   @media (max-width: $desktop) {
@@ -139,9 +136,19 @@
   .hero__full {
     display: block;
   }
+}
+
+.hero__short {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .hero__full {
+    display: none;
+  }
 
   .hero__short {
-    display: none;
+    display: block;
   }
 }
 
@@ -174,12 +181,12 @@
   }
 
   @media (max-width: $tablet) {
-    transform: translate(-100%,-35%);
+    transform: translate(-100%, -35%);
     flex: 0 0 100%;
   }
 }
 
-.hero__image img{
+.hero__image img {
   width: 100%;
   object-fit: contain;
 }

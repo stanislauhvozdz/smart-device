@@ -17,11 +17,11 @@
 .header__container {
   display: flex;
   align-items: center;
-  
+
   @media (max-width: $desktop) {
     padding: 0 25px;
   }
-  
+
   @media (max-width: $desktop) {
     padding: 0 15px;
   }
@@ -100,7 +100,7 @@
 
   &:hover {
     color: lighten($color-accent, 20);
-    
+
     & .header__icon-link {
       transition: all 0.3s ease-in-out;
       fill: lighten($color-accent, 20);

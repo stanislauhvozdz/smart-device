@@ -8,7 +8,7 @@
       opacity: 1;
     }
   }
-  
+
   &:focus-within {
     box-shadow: 1px 1px 10px 1px $color-white;
   }
@@ -23,7 +23,7 @@
   }
 }
 
-.good__image img{
+.good__image img {
   object-fit: cover;
 }
 
@@ -31,10 +31,9 @@
   position: absolute;
   top: 52px;
   left: 45px;
-  font-family: "Roboto Condensed";
+  font-family: $ff-third;
   font-size: 20px;
   line-height: 30px;
-  width: 220px;
   margin: 0;
   font-weight: 400;
   width: 160px;

@@ -52,14 +52,14 @@ select {
 }
 
 .button {
-  font-family: "Roboto Condensed";
+  font-family: $ff-third;
   font-weight: $color-white;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: $color-white;
   background-color: transparent;
   height: 45px;
   width: 180px;
@@ -76,7 +76,7 @@ select {
     border-color: $color-accent;
     color: $color-accent;
   }
-  
+
   &--dark {
     &:hover {
       border-color: $color-dark;
@@ -95,11 +95,11 @@ select {
     }
 
     @media (max-width: $desktop) {
-      width: 396px;  
+      width: 396px;
     }
 
     @media (max-width: $tablet) {
-      transform: translateY(-5px); 
+      transform: translateY(-5px);
     }
   }
 
@@ -111,7 +111,7 @@ select {
 }
 
 .section-title {
-  font-family: "Roboto Condensed";
+  font-family: $ff-third;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;

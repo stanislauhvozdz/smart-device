@@ -4,7 +4,7 @@ let nav = document.querySelector('#nav');
 let adresList = document.querySelector('.contact-details__list');
 let navList = document.querySelector('.navigation__list');
 
-window.addEventListener("resize", () => {
+window.addEventListener('resize', () => {
   if (window.innerWidth < 769) {
     navList.classList.add('_active')
     adresList.classList.add('_active')

@@ -13,11 +13,11 @@
 
 .goods-and-service__container {
   padding: 0 15px;
-  
+
   @media (max-width: $desktop) {
     padding: 0 25px;
   }
-  
+
   @media (max-width: $tablet) {
     padding: 0 15px;
   }

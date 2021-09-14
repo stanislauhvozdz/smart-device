@@ -39,24 +39,4 @@
   text-decoration: none;
   display: block;
   transition: all 0.3s ease-in-out;
-
-  &:hover {
-
-    &.card {
-      background-color: $color-accent;
-      border-color: $color-accent;
-    }
-
-    &.card h3 {
-      color: $color-white;
-    }
-
-    &.card p {
-      color: $color-white;
-    }
-
-    .card__img {
-      fill: $color-white;
-    }
-  }
 }
