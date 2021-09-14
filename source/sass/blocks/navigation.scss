@@ -16,4 +16,9 @@
   line-height: 25px;
   color: rgba($color-text2, 0.5);
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: $color-accent;
+  }
 }

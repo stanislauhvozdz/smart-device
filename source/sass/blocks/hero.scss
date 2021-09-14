@@ -156,8 +156,8 @@
   color: rgba($color-white, 0.5);
   transform: rotate(-90deg);
   position: absolute;
-  top: 736px;
-  left: 20.7%;
+  top: 147%;
+  left: -40px;
   font-size: 14px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -175,6 +175,7 @@
 .hero__image {
   flex: 0 0 50%;
   transform: translateX(-100%);
+  position: relative;
 
   @media (max-width: $desktop) {
     transform: translate(-64%, -15%) scale(1.1);
@@ -184,9 +185,35 @@
     transform: translate(-100%, -35%);
     flex: 0 0 100%;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    top: -132px;
+    left: 120px;
+    z-index: -1;
+    background: url("../img/hero-bg.svg") transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (max-width: $desktop) {
+      width: 500px;
+      height: 500px;
+      top: -18px;
+      left: -89px;
+    }
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
 }
 
 .hero__image img {
   width: 100%;
   object-fit: contain;
+  overflow: hidden;
 }

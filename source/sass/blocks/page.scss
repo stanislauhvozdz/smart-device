@@ -7,3 +7,10 @@
 .page__main {
   flex-grow: 1;
 }
+
+.page__wrapper {
+  background: url("../img/wrapper-polygon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 66%;
+}

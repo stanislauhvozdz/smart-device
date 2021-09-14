@@ -12,17 +12,17 @@
 
 .features__container {
   @media (max-width: $desktop) {
-    padding: 0px 25px;
+    padding: 0 25px;
   }
 
   @media (max-width: $tablet) {
-    padding: 0px 15px;
+    padding: 0 15px;
   }
 }
 
 .features__list {
   display: grid;
-  grid-template: repeat(1frm);
+  grid-template: repeat(1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin: 0;

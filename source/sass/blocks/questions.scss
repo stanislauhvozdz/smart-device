@@ -1,5 +1,7 @@
 .questions {
-  background: $color-accent;
+  background: url("../img/question-polygon.svg") $color-accent;
+  background-repeat: no-repeat;
+  background-position: 61% 62%;
   padding: 96px 0 113px;
 
   @media (max-width: $desktop) {
@@ -16,7 +18,7 @@
 }
 
 .questions__container {
-  background: url("../img/airplane.png") $color-accent;
+  background: url("../img/airplane.png") transparent;
   background-repeat: no-repeat;
   background-position: -9px 68px;
 
@@ -41,6 +43,7 @@
 }
 
 .questions__title {
+  transform: translate(-3px, -2px);
   margin-bottom: 10px;
 
   @media (max-width: $desktop) {

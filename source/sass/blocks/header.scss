@@ -110,6 +110,8 @@
 
 .header__callback {
   margin-left: 50px;
+  cursor: pointer;
+  text-decoration: none;
 
   @media (max-width: $desktop) {
     display: none;

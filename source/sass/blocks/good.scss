@@ -37,6 +37,7 @@
   margin: 0;
   font-weight: 400;
   width: 160px;
+  color: $color-white;
 
   @media (max-width: $desktop) {
     top: 42px;
@@ -48,7 +49,7 @@
   }
 }
 
-.good a {
+.good p {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -58,20 +59,21 @@
   width: 61px;
   height: 61px;
   background-color: $color-accent;
+  margin: 0;
 
-  &:focus {
-    outline: none;
-  }
+  // &:focus {
+  //   outline: none;
+  // }
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 1000px;
-    height: 1000px;
-    cursor: pointer;
-    right: -600px;
-    top: -700px;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   width: 1000px;
+  //   height: 1000px;
+  //   cursor: pointer;
+  //   right: -600px;
+  //   top: -700px;
+  // }
 }
 
 .good__icon-link {

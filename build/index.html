@@ -7,10 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
-  <link rel="preload" href="fonts/opensansnormal.woff2" as="font">
-  <link rel="preload" href="fonts/opensanssemibold.woff2" as="font">
-  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/PTMono-Regular.woff" as="font">
+  <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/Roboto-Regular.woff" as="font">
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.wof2" as="font">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
@@ -18,9 +22,10 @@
   <header class="page__header header">
     <div class="container container--xl header__container">
       <a class="header__logo-link logo">
-        <img class="logo__img" src="img/brain.svg" alt="Логотип компании" width="52" height="52">
-        <p class="logo__title">Smart Device</p>
-        <span class="logo__subtitle">умные технологии</span>
+        <picture>
+          <source media="(max-width: 768px)" srcset="img/logo-header-mobile.svg">
+          <img src="img/logo-header-desktop.svg" alt="Логотип фирмы" width="202" height="52">
+        </picture>
       </a>
       <ul class="header__list">
         <li class="header__item">
@@ -40,7 +45,7 @@
           </a>
         </li>
       </ul>
-      <button class="header__callback button" type="button" id="popup-show">Заказать звонок</button>
+      <a href="#" class="header__callback button" id="popup-show">Заказать звонок</a>
     </div>
   </header>
 
@@ -51,12 +56,12 @@
       <div class="hero__content">
         <div class="container container--xl hero__container">
           <div class="hero__body">
+            <a href="#r2" class="hero__scroll">Скролл вниз</a>
             <h1 class="hero__title">Печатные платы</h1>
             <p class="hero__subtitle"> производство и монтаж, поставка комплектующих, блоков и модулей</p>
             <a href="#r1" class="hero__advice button button--main"><span class="hero__full">Получить бесплатную
                 консультацию</span><span class="hero__short">Бесплатная консультация</span></a>
           </div>
-          <a href="#r2" class="hero__scroll">Скролл вниз</a>
         </div>
       </div>
       <div class="hero__image">
@@ -68,130 +73,140 @@
       </div>
     </section>
 
-    <section class="features" id="r2">
-      <h2 class="visually-hidden">Преимущества нашей компании</h2>
-      <div class="container features__container">
-        <ul class="features__list">
-          <li class="features__item">
-            <a href="#" class="features__link card">
-              <svg class="card__img card__img--stopwatch" width="29" height="35">
-                <use xlink:href="img/sprite.svg#stopwatch"></use>
-              </svg>
-              <h3>Оперативные сроки</h3>
-              <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
-                доставлять заказы плат и комплектующих в самые короткие сроки
-              </p>
-            </a>
-          </li>
-          <li class="features__item">
-            <a href="#" class="features__link card card--full">
-              <svg class="card__img card__img--hired" width="35" height="35">
-                <use xlink:href="img/sprite.svg#hired"></use>
-              </svg>
-              <h3>Крупные поставщики</h3>
-              <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-                Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
-              </p>
-            </a>
-          </li>
-          <li class="features__item">
-            <a href="#" class="features__link card">
-              <svg class="card__img card__img--detective" width="36" height="31">
-                <use xlink:href="img/sprite.svg#detective"></use>
-              </svg>
-              <h3>Полная конфиденциальность</h3>
-              <p>По желанию клиента мы обеспечиваем полную конфеденциальность.
-              </p>
-            </a>
-          </li>
-          <li class="features__item">
-            <a href="#" class="features__link card">
-              <svg class="card__img card__img--tag" width="35" height="35">
-                <use xlink:href="img/sprite.svg#tag"></use>
-              </svg>
-              <h3>Персонализация стоимости</h3>
-              <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-                устраивает.
-              </p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <div class="page__wrapper">
 
-    <section class="about-us">
-      <div class="container about-us__container">
-        <h2 class="section-title">О компании</h2>
-        <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
-          мировые технологии с 1997
-          года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-        <p>
-          Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
-          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
-          РоссАвтоПрома
-          (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
-        </p>
-        <a href="#" class="about-us__link button button--accent">Подробнее</a>
-      </div>
-    </section>
+      <section class="features" id="r2">
+        <h2 class="visually-hidden">Преимущества нашей компании</h2>
+        <div class="container features__container">
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="card">
+                <svg class="card__img card__img--stopwatch" width="29" height="35">
+                  <use xlink:href="img/sprite.svg#stopwatch"></use>
+                </svg>
+                <h3>Оперативные сроки</h3>
+                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
+                  доставлять заказы плат и комплектующих в самые короткие сроки
+                </p>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="card card--full">
+                <svg class="card__img card__img--hired" width="35" height="35">
+                  <use xlink:href="img/sprite.svg#hired"></use>
+                </svg>
+                <h3>Крупные поставщики</h3>
+                <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                  Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+                </p>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="card">
+                <svg class="card__img card__img--detective" width="36" height="31">
+                  <use xlink:href="img/sprite.svg#detective"></use>
+                </svg>
+                <h3>Полная конфиденциальность</h3>
+                <p>По желанию клиента мы обеспечиваем полную конфеденциальность.
+                </p>
+              </div>
+            </li>
+            <li class="features__item">
+              <div class="card">
+                <svg class="card__img card__img--tag" width="35" height="35">
+                  <use xlink:href="img/sprite.svg#tag"></use>
+                </svg>
+                <h3>Персонализация стоимости</h3>
+                <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+                  устраивает.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about-us">
+        <div class="container about-us__container">
+          <h2 class="section-title">О компании</h2>
+          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
+            мировые технологии с 1997
+            года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
+          <p class="test">
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
+            РоссАвтоПрома
+            (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
+          </p>
+          <a href="#" class="about-us__link button button--accent">Подробнее</a>
+        </div>
+      </section>
+
+    </div>
 
     <section class="goods-and-service">
       <div class="container goods-and-service__container">
         <h2 class="goods-and-service__title section-title">Service Device предлагает следующие товары и услуги</h2>
         <ul class="goods-and-service__list">
           <li class="goods-and-service__item">
-            <article class="good">
-              <div class="good__image">
-                <picture>
-                  <!-- 1x: 370px; 2x: 1240px -->
-                  <source srcset="img/goods-1@1x.webp 1x, img/goods-1@2x.webp 2x" type="image/webp">
-                  <img class="img" src="img/goods-1@1x.png" srcset="img/goods-1@2x.png 2x" alt="Печатная плата"
-                    width="370" height="620">
-                </picture>
-              </div>
-              <h3>Производство печатных плат</h3>
-              <a href="#" aria-label="Перейти к покупке">
-                <svg class="good__icon-link" width="5" height="8">
-                  <use xlink:href="img/sprite.svg#next"></use>
-                </svg>
-              </a>
-            </article>
+            <a href="#" class="goods-and-service__link">
+              <article class="good">
+                <div class="good__image">
+                  <picture>
+                    <!-- 1x: 370px; 2x: 1240px -->
+                    <source srcset="img/goods-1@1x.webp 1x, img/goods-1@2x.webp 2x" type="image/webp">
+                    <img class="img" src="img/goods-1@1x.png" srcset="img/goods-1@2x.png 2x" alt="Печатная плата"
+                      width="370" height="620">
+                  </picture>
+                </div>
+                <h3>Производство печатных плат</h3>
+                <p>
+                  <svg class="good__icon-link" width="5" height="8">
+                    <use xlink:href="img/sprite.svg#next"></use>
+                  </svg>
+                </p>
+              </article>
+            </a>
           </li>
           <li class="goods-and-service__item">
-            <article class="good">
-              <div class="good__image">
-                <picture>
-                  <!-- 1x: 370px; 2x: 1240px -->
-                  <source srcset="img/goods-2@1x.webp 1x, img/goods-2@2x.webp 2x" type="image/webp">
-                  <img class="img" src="img/goods-2@1x.png" srcset="img/goods-2@2x.png 2x"
-                    alt="Процесс монтажа печатных плат" width="370" height="620">
-                </picture>
-              </div>
-              <h3>Монтаж печатных плат</h3>
-              <a href="#" class="good__link" aria-label="Перейти к покупке">
-                <svg class="good__icon-link" width="5" height="8">
-                  <use xlink:href="img/sprite.svg#next"></use>
-                </svg>
-              </a>
-            </article>
+            <a href="#" class="goods-and-service__link">
+              <article class="good">
+                <div class="good__image">
+                  <picture>
+                    <!-- 1x: 370px; 2x: 1240px -->
+                    <source srcset="img/goods-2@1x.webp 1x, img/goods-2@2x.webp 2x" type="image/webp">
+                    <img class="img" src="img/goods-2@1x.png" srcset="img/goods-2@2x.png 2x"
+                      alt="Процесс монтажа печатных плат" width="370" height="620">
+                  </picture>
+                </div>
+                <h3>Монтаж печатных плат</h3>
+                <p class="good__link">
+                  <svg class="good__icon-link" width="5" height="8">
+                    <use xlink:href="img/sprite.svg#next"></use>
+                  </svg>
+                </p>
+              </article>
+            </a>
           </li>
           <li class="goods-and-service__item">
-            <article class="good">
-              <div class="good__image">
-                <picture>
-                  <!-- 1x: 370px; 2x: 1240px -->
-                  <source srcset="img/goods-3@1x.webp 1x, img/goods-3@2x.webp 2x" type="image/webp">
-                  <img class="img" src="img/goods-3@1x.png" srcset="img/goods-3@2x.png 2x" alt="Светодиодная лента"
-                    width="370" height="620">
-                </picture>
-              </div>
-              <h3>Комплектующие для светотехники</h3>
-              <a href="#" aria-label="Перейти к покупке">
-                <svg class="good__icon-link" width="5" height="8">
-                  <use xlink:href="img/sprite.svg#next"></use>
-                </svg>
-              </a>
-            </article>
+            <a href="#" class="goods-and-service__link">
+              <article class="good">
+                <div class="good__image">
+                  <picture>
+                    <!-- 1x: 370px; 2x: 1240px -->
+                    <source srcset="img/goods-3@1x.webp 1x, img/goods-3@2x.webp 2x" type="image/webp">
+                    <img class="img" src="img/goods-3@1x.png" srcset="img/goods-3@2x.png 2x" alt="Светодиодная лента"
+                      width="370" height="620">
+                  </picture>
+                </div>
+                <h3>Комплектующие для светотехники</h3>
+                <p>
+                  <svg class="good__icon-link" width="5" height="8">
+                    <use xlink:href="img/sprite.svg#next"></use>
+                  </svg>
+                </p>
+              </article>
+            </a>
           </li>
         </ul>
       </div>
@@ -212,7 +227,7 @@
               <textarea id="question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
               <button type="submit" class="button button--main">Задать вопрос</button>
               <label class="form__field form__field--checkbox">
-                <input type="checkbox" required>
+                <input type="checkbox" name="copyright" required>
                 <span>Я согласен на обработку персональных данных</span>
               </label>
             </form>
@@ -226,10 +241,8 @@
   <footer class="page__footer footer">
     <div class="container container--xl footer__container">
       <div class="footer__social">
-        <a class="logo">
-          <img class="logo__img" src="img/brain.svg" alt="Логотип компании" width="52" height="52">
-          <p class="logo__title">Service Device</p>
-          <span class="logo__subtitle">умные технологии</span>
+        <a class="footer__logo-link">
+          <img src="img/logo-footer-desktop.svg" alt="Логотип фирмы" width="216" height="52">
         </a>
         <p class="footer__social-year">1999-2018 SD Service Devices</p>
         <ul class="footer__social-list">
@@ -312,8 +325,8 @@
       <div class="footer__copyright">
         <p class="hidden">Все права защищены</p>
         <p class="hidden">1999-2018 SD Service Devices</p>
-        <p>Условия конфиденциальности</p>
-        <p>Developed by wow studio </p>
+        <p><a>Условия конфиденциальности</a></p>
+        <p><a>Developed by wow studio</a></p>
       </div>
     </div>
   </footer>
@@ -325,23 +338,23 @@
         <button class="popup__close" aria-label="Закрыть окно"></button>
         <h2 class="popup__title section-title">Закажите звонок!</h2>
         <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <form class="form" action="#" method="POST">
-            <label for="popup-name" class="visually-hidden">Имя</label>
-            <input id="popup-name" name="name" type="text" placeholder="Имя" required>
-            <label for="popup-phone" class="visually-hidden">Телефон</label>
-            <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required>
-            <label for="popup-question-value" class="visually-hidden">Ваш вопрос</label>
-            <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
-            <button type="submit" class="button button--main">Задать вопрос</button>
-            <label class="form__field form__field--checkbox">
-              <input type="checkbox" required>
-              <span>Я согласен на обработку персональных данных</span>
-            </label>
-          </form>
-        </div>
+        <form class="form" action="#" method="POST">
+          <label for="popup-name" class="visually-hidden">Имя</label>
+          <input id="popup-name" name="name" type="text" placeholder="Имя" required>
+          <label for="popup-phone" class="visually-hidden">Телефон</label>
+          <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required>
+          <label for="popup-question-value" class="visually-hidden">Ваш вопрос</label>
+          <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
+          <button type="submit" class="button button--main">Задать вопрос</button>
+          <label class="form__field form__field--checkbox">
+            <input type="checkbox" name="copyright" required>
+            <span>Я согласен на обработку персональных данных</span>
+          </label>
+        </form>
       </div>
-    
+    </div>
   </section>
+
   <script src="js/main.js">
   </script>
 </body>

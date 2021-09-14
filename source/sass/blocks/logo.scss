@@ -6,28 +6,21 @@
   flex-direction: column;
 
   @media (max-width: $tablet) {
-    width: 189px;
+    width: 68px;
+    height: 68px;
   }
-}
 
-.logo__img {
-  margin-right: 16px;
-}
+  &--footer {
+    width: 225px;
+    margin-bottom: 53px;
 
-.logo__title {
-  padding: 0;
-  padding-top: 5px;
-  margin: 0;
-  font-family: $ff-third;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 29px;
-}
+    @media (max-width: $desktop) {
+      margin-bottom: 0;
+    }
 
-.logo__subtitle {
-  font-family: $ff-secondary;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: $color-dark;
+    @media (max-width: $tablet) {
+      transform: translateX(4px);
+      margin-bottom: 26px;
+    }
+  }
 }

@@ -55,13 +55,13 @@
     @media (max-width: $desktop) {
       margin-bottom: 17px;
       text-overflow: ellipsis;
-      width: 517px;
+      min-width: 517px;
       height: 90px;
       overflow: hidden;
     }
 
     @media (max-width: $tablet) {
-      width: 100%;
+      min-width: 100%;
       height: auto;
       margin-bottom: 41px;
     }
