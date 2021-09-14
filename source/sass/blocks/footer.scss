@@ -168,15 +168,19 @@
   }
 
   & p:nth-child(2n+2) {
-    flex-grow: 1;
-    text-align: center;
-    transform: translateX(10px);
+    @media (min-width: $desktop) {
+      text-align: center;
+      transform: translateX(10px);
+      flex-grow: 1;
+    }
   }
 
   & p:nth-child(3n+3) {
-    flex-grow: 2;
-    transform: translateX(-35px);
-    text-align: center;
+    @media (min-width: $desktop) {
+      flex-grow: 2;
+      transform: translateX(-35px);
+      text-align: center;
+    }
   }
 
   & p:nth-child(4n+4) {
