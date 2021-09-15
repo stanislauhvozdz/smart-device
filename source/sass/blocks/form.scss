@@ -15,6 +15,12 @@
     grid-template-columns: 1fr;
     gap: 35px;
   }
+
+  @media (max-width: $desktop) {
+    &--questions {
+      max-width: 100%;
+    }
+  }
 }
 
 .form input,

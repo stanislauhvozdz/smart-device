@@ -11,14 +11,14 @@
   overflow: hidden;
 
   @media (max-width: $desktop) {
-    padding-top: 23px;
+    padding-top: 19px;
     padding-bottom: 70px;
     margin-bottom: 55px;
   }
 
   @media (max-width: $tablet) {
     padding-bottom: 0;
-    padding-top: 60px;
+    padding-top: 70px;
     margin-bottom: 37px;
     overflow: visible;
   }
@@ -174,7 +174,7 @@
 
 .hero__image {
   flex: 0 0 50%;
-  transform: translateX(-100%);
+  transform: translate(-116%, 60px);
   position: relative;
 
   @media (max-width: $desktop) {
@@ -183,7 +183,7 @@
 
   @media (max-width: $tablet) {
     transform: translate(-100%, -35%);
-    flex: 0 0 100%;
+    flex: 0 0 80%;
   }
 
   &::before {
@@ -191,19 +191,19 @@
     position: absolute;
     width: 700px;
     height: 700px;
-    top: -132px;
-    left: 120px;
+    top: -170px;
+    left: 257px;
     z-index: -1;
     background: url("../img/hero-bg.svg") transparent;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 96%;
 
     @media (max-width: $desktop) {
       width: 500px;
       height: 500px;
-      top: -18px;
-      left: -89px;
+      top: -50px;
+      left: -68px;
     }
 
     @media (max-width: $tablet) {

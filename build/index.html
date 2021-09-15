@@ -7,13 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="fonts/PTMono-Regular.woff" as="font">
   <link rel="preload" href="fonts/PTMono-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/Roboto-Regular.woff" as="font">
   <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/RobotoCondensed-Regular.woff" as="font">
   <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" as="font">
-  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font">
   <link rel="preload" href="fonts/RobotoCondensed-Bold.wof2" as="font">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -22,10 +18,7 @@
   <header class="page__header header">
     <div class="container container--xl header__container">
       <a class="header__logo-link logo">
-        <picture>
-          <source media="(max-width: 768px)" srcset="img/logo-header-mobile.svg">
-          <img src="img/logo-header-desktop.svg" alt="Логотип фирмы" width="202" height="52">
-        </picture>
+        <img src="img/logo-header-desktop.svg" alt="Логотип фирмы" width="202" height="52">
       </a>
       <ul class="header__list">
         <li class="header__item">
@@ -132,7 +125,7 @@
           <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем
             мировые технологии с 1997
             года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-          <p class="test">
+          <p>
             Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
             платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
             РоссАвтоПрома
@@ -155,8 +148,7 @@
                   <picture>
                     <!-- 1x: 370px; 2x: 1240px -->
                     <source srcset="img/goods-1@1x.webp 1x, img/goods-1@2x.webp 2x" type="image/webp">
-                    <img class="img" src="img/goods-1@1x.png" srcset="img/goods-1@2x.png 2x" alt="Печатная плата"
-                      width="370" height="620">
+                    <img class="img" src="img/goods-1@1x.png" srcset="img/goods-1@2x.png 2x" alt="Печатная плата" width="370" height="620">
                   </picture>
                 </div>
                 <h3>Производство печатных плат</h3>
@@ -175,8 +167,7 @@
                   <picture>
                     <!-- 1x: 370px; 2x: 1240px -->
                     <source srcset="img/goods-2@1x.webp 1x, img/goods-2@2x.webp 2x" type="image/webp">
-                    <img class="img" src="img/goods-2@1x.png" srcset="img/goods-2@2x.png 2x"
-                      alt="Процесс монтажа печатных плат" width="370" height="620">
+                    <img class="img" src="img/goods-2@1x.png" srcset="img/goods-2@2x.png 2x" alt="Процесс монтажа печатных плат" width="370" height="620">
                   </picture>
                 </div>
                 <h3>Монтаж печатных плат</h3>
@@ -195,8 +186,7 @@
                   <picture>
                     <!-- 1x: 370px; 2x: 1240px -->
                     <source srcset="img/goods-3@1x.webp 1x, img/goods-3@2x.webp 2x" type="image/webp">
-                    <img class="img" src="img/goods-3@1x.png" srcset="img/goods-3@2x.png 2x" alt="Светодиодная лента"
-                      width="370" height="620">
+                    <img class="img" src="img/goods-3@1x.png" srcset="img/goods-3@2x.png 2x" alt="Светодиодная лента" width="370" height="620">
                   </picture>
                 </div>
                 <h3>Комплектующие для светотехники</h3>
@@ -218,16 +208,16 @@
           <h2 class="questions__title section-title">Остались вопросы? Задайте их нам!</h2>
           <p class="questions__subtitle">Мы проконсультируем Вас бесплатно</p>
           <div class="questions__form">
-            <form class="form" action="#" method="POST">
+            <form class="form form--questions" action="#" method="POST">
               <label for="name" class="visually-hidden">Имя</label>
-              <input id="name" name="name" type="text" placeholder="Имя" required>
+              <input id="name" name="name" type="text" placeholder="Имя" required="">
               <label for="phone" class="visually-hidden">Телефон</label>
-              <input id="phone" name="phone" type="tel" placeholder="Телефон" required>
+              <input id="phone" name="phone" type="tel" placeholder="Телефон" required="">
               <label for="question-value" class="visually-hidden">Ваш вопрос</label>
               <textarea id="question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
               <button type="submit" class="button button--main">Задать вопрос</button>
               <label class="form__field form__field--checkbox">
-                <input type="checkbox" name="copyright" required>
+                <input type="checkbox" name="copyright" required="">
                 <span>Я согласен на обработку персональных данных</span>
               </label>
             </form>
@@ -272,7 +262,7 @@
       <div class="footer__information">
         <div class="footer__site-nav">
           <h2 class="footer__title">Разделы сайта
-            <button type="button" class="footer__toogle" id="nav"></button>
+            <button type="button" class="footer__toogle footer__toogle--active" id="nav"></button>
           </h2>
           <nav class="navigation">
             <ul class="navigation__list">
@@ -302,13 +292,12 @@
         </div>
         <div class="footer__contact-details contact-details">
           <h2 class="footer__title">Наш офис
-            <button type="button" class="footer__toogle" id="adres"></button>
+            <button type="button" class="footer__toogle footer__toogle--active" id="adres"></button>
           </h2>
           <ul class="contact-details__list">
             <li class="contact-details__item">
-              <a class="contact-details__link" href="http://maps.google.com/?ll=55.916354318272326,37.772083997130835"
-                target="_blank">
-                г. Мытищи, Олимпийский проспект,д.10</a>
+              <a class="contact-details__link" href="http://maps.google.com/?ll=55.916354318272326,37.772083997130835" target="_blank">
+                г. Мытищи, Олимпийский проспект, д.10</a>
             </li>
             <li class="contact-details__item">
               <a class="contact-details__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -325,8 +314,8 @@
       <div class="footer__copyright">
         <p class="hidden">Все права защищены</p>
         <p class="hidden">1999-2018 SD Service Devices</p>
-        <p><a>Условия конфиденциальности</a></p>
-        <p><a>Developed by wow studio</a></p>
+        <p><a href="#">Условия конфиденциальности</a></p>
+        <p><a href="#">Developed by wow studio</a></p>
       </div>
     </div>
   </footer>
@@ -340,14 +329,14 @@
         <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="form" action="#" method="POST">
           <label for="popup-name" class="visually-hidden">Имя</label>
-          <input id="popup-name" name="name" type="text" placeholder="Имя" required>
+          <input id="popup-name" name="name" type="text" placeholder="Имя" required="">
           <label for="popup-phone" class="visually-hidden">Телефон</label>
-          <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required>
+          <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required="">
           <label for="popup-question-value" class="visually-hidden">Ваш вопрос</label>
           <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
           <button type="submit" class="button button--main">Задать вопрос</button>
           <label class="form__field form__field--checkbox">
-            <input type="checkbox" name="copyright" required>
+            <input type="checkbox" name="copyright" required="">
             <span>Я согласен на обработку персональных данных</span>
           </label>
         </form>

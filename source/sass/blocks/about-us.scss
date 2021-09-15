@@ -48,22 +48,22 @@
   margin: 0;
   font-size: 16px;
   line-height: 22px;
+  margin-bottom: 20px;
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
-
+  &:last-of-type {
     @media (max-width: $desktop) {
-      margin-bottom: 17px;
-      text-overflow: ellipsis;
-      min-width: 517px;
       height: 90px;
       overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
     }
 
     @media (max-width: $tablet) {
-      min-width: 100%;
-      height: auto;
-      margin-bottom: 41px;
+      display: -webkit-box;
+      -webkit-line-clamp: 8;
+      -webkit-box-orient: vertical;
     }
   }
 
