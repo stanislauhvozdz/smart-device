@@ -3,6 +3,10 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 20px;
+  }
 }
 
 .contact-details__link {

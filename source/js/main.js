@@ -6,7 +6,7 @@ try {
   let navList = document.querySelector('.navigation__list');
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth < 769) {
+    if (window.innerWidth <= 767) {
       navList.classList.add('_active')
       adresList.classList.add('_active')
     } else {
@@ -15,7 +15,7 @@ try {
     };
   });
 
-  if (window.innerWidth < 769) {
+  if (window.innerWidth <= 767) {
     navList.classList.add('_active')
     adresList.classList.add('_active')
   } else {
@@ -26,18 +26,18 @@ try {
   adres.addEventListener('click', function () {
     adresList.classList.toggle('_active');
     adres.classList.toggle('footer__toogle--active')
-    if (navList.classList.contains('_active') && nav.classList.contains('footer__toogle--active')) {
-      navList.classList.remove('_active');
-      nav.classList.remove('footer__toogle--active')
+    if (!navList.classList.contains('_active') && !nav.classList.contains('footer__toogle--active')) {
+      navList.classList.add('_active');
+      nav.classList.add('footer__toogle--active')
     }
   });
 
   nav.addEventListener('click', function () {
     navList.classList.toggle('_active');
     nav.classList.toggle('footer__toogle--active')
-    if (adresList.classList.contains('_active') && adres.classList.contains('footer__toogle--active')) {
-      adresList.classList.remove('_active');
-      adres.classList.remove('footer__toogle--active')
+    if (!adresList.classList.contains('_active') && !adres.classList.contains('footer__toogle--active')) {
+      adresList.classList.add('_active');
+      adres.classList.add('footer__toogle--active')
     }
   });
 } catch {};

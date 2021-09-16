@@ -1,6 +1,7 @@
 .footer {
   padding-top: 66px;
   background-color: $color-footer-bg;
+  padding-bottom: 20px;
 
   @media (max-width: $desktop) {
     padding-top: 17px;
@@ -9,7 +10,6 @@
 
 .footer__container {
   display: grid;
-  // grid-template-columns: 230px 1fr;
   grid-template-columns: 326px 1fr;
 
   @media (max-width: 1320px) {
@@ -117,7 +117,6 @@
 
 .footer__site-nav {
   justify-self: center;
-  // padding-left: 25px;
 
   @media (max-width: $desktop) {
     justify-self: flex-start;
@@ -157,7 +156,6 @@
 }
 
 .footer__contact-details {
-  // padding-left: 25px;
   justify-self: flex-end;
 
   @media (max-width: $desktop) {

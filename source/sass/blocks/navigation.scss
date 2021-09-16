@@ -10,9 +10,12 @@
     column-gap: 20px;
   }
 
-
   @media (max-width: $desktop) {
     grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 20px;
   }
 }
 
