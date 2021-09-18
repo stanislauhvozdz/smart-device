@@ -1,24 +1,24 @@
 .hero {
   display: flex;
-  background: url("../img/hero-bg.webp") $color-text2;
+  background: url("../img/hero-bg.png") $color-text2;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 113px;
+  padding-top: 200px;
   padding-bottom: 160px;
   align-items: center;
   margin-bottom: 113px;
   overflow: hidden;
 
   @media (max-width: $desktop) {
-    padding-top: 19px;
+    padding-top: 106px;
     padding-bottom: 70px;
     margin-bottom: 55px;
   }
 
   @media (max-width: $tablet) {
     padding-bottom: 0;
-    padding-top: 70px;
+    padding-top: 157px;
     margin-bottom: 37px;
     overflow: visible;
   }
@@ -174,8 +174,16 @@
 
 .hero__image {
   flex: 0 0 50%;
-  transform: translate(-116%, 60px);
+  transform: translate(-105%,60px);
   position: relative;
+
+  @media (max-width: 1400px) {
+    transform: translate(-80%,60px);
+  }
+
+  @media (max-width: 1150px) {
+    transform: translate(-70%,60px);
+  }
 
   @media (max-width: $desktop) {
     transform: translate(-64%, -15%) scale(1.1);
@@ -184,6 +192,12 @@
   @media (max-width: $tablet) {
     transform: translate(-100%, -35%);
     flex: 0 0 80%;
+    overflow: hidden;
+  }
+
+  @media (max-width: 400px) {
+    flex: 0 0 90%;
+
   }
 
   &::before {
@@ -191,8 +205,8 @@
     position: absolute;
     width: 700px;
     height: 700px;
-    top: -170px;
-    left: 257px;
+    top: -174px;
+    left: 104px;
     z-index: -1;
     background: url("../img/hero-bg.svg") transparent;
     background-repeat: no-repeat;
@@ -207,7 +221,8 @@
     }
 
     @media (max-width: $tablet) {
-      display: none;
+      right: -310px;
+      left: auto;
     }
   }
 }

@@ -18,7 +18,7 @@
 <body class="page__body">
   <header class="page__header header">
     <div class="container container--xl header__container">
-      <a href="#" class="header__logo-link logo">
+      <a class="header__logo-link logo">
         <img src="img/logo-header-desktop.svg" alt="Логотип фирмы" width="202" height="52">
       </a>
       <ul class="header__list">
@@ -326,20 +326,20 @@
   </footer>
 
 
-  <section class="popup">
+  <section class="popup popup--active">
     <div class="popup__overlay">
       <div class="popup__content">
         <button class="popup__close" aria-label="Закрыть окно"></button>
         <h2 class="popup__title section-title">Закажите звонок!</h2>
         <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-        <form class="form" action="#" method="POST">
+        <form class="form form--popup" action="#" method="POST" id="popup-form">
           <label for="popup-name" class="visually-hidden">Имя</label>
           <input id="popup-name" name="name" type="text" placeholder="Имя" required>
           <label for="popup-phone" class="visually-hidden">Телефон</label>
           <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required>
           <label for="popup-question-value" class="visually-hidden">Ваш вопрос</label>
           <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
-          <button type="submit" class="button button--main">Задать вопрос</button>
+          <button type="submit" class="button button--main">Отправить</button>
           <label class="form__field form__field--checkbox">
             <input type="checkbox" name="copyright" required>
             <span>Я согласен на обработку персональных данных</span>

@@ -44,9 +44,14 @@ try {
 
 try {
   // попап
+  let pageBody = document.querySelector('.page__body');
   let popup = document.querySelector('.popup');
   let openPopupButtons = document.querySelector('#popup-show');
   let closePopupButton = document.querySelector('.popup__close');
+
+  let popupForm = document.querySelector('#popup-form');
+  let lastChildForm = popupForm.lastChild;
+  console.log(lastChildForm);
 
   const isEscKey = (evt) => evt.key === 'Escape' || evt.key === 'Esc';
 
@@ -61,6 +66,11 @@ try {
     e.preventDefault();
     popup.classList.add('popup--active');
     formInputText.focus();
+    pageBody.classList.add('_no-scroll');
+
+    if (popupForm.lastChild.hasFocus() === true) {
+      formInputText.focus();
+    }
   })
 
   closePopupButton.addEventListener('click', () => {

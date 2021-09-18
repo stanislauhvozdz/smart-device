@@ -21,6 +21,14 @@
       max-width: 100%;
     }
   }
+
+  &--popup{
+    gap: 37px;
+
+    & input {
+      height: 52px;
+    }
+  }
 }
 
 .form input,
