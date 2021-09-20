@@ -326,22 +326,22 @@
   </footer>
 
 
-  <section class="popup popup--active">
+  <section class="popup">
     <div class="popup__overlay">
       <div class="popup__content">
-        <button class="popup__close" aria-label="Закрыть окно"></button>
+        <button class="popup__close" aria-label="Закрыть окно" tabindex="6" onfocus="this.tabIndex=1;" onblur="this.tabIndex=8;"></button>
         <h2 class="popup__title section-title">Закажите звонок!</h2>
         <p class="popup__subtitle">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <form class="form form--popup" action="#" method="POST" id="popup-form">
           <label for="popup-name" class="visually-hidden">Имя</label>
-          <input id="popup-name" name="name" type="text" placeholder="Имя" required>
+          <input id="popup-name" name="name" type="text" placeholder="Имя" required tabindex="1">
           <label for="popup-phone" class="visually-hidden">Телефон</label>
-          <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required>
+          <input id="popup-phone" name="phone" type="tel" placeholder="Телефон" required tabindex="2">
           <label for="popup-question-value" class="visually-hidden">Ваш вопрос</label>
-          <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос"></textarea>
-          <button type="submit" class="button button--main">Отправить</button>
+          <textarea id="popup-question-value" name="question-value" placeholder="Ваш вопрос" tabindex="3"></textarea>
+          <button type="submit" class="button button--main" tabindex="5">Отправить</button>
           <label class="form__field form__field--checkbox">
-            <input type="checkbox" name="copyright" required>
+            <input type="checkbox" name="copyright" required tabindex="4">
             <span>Я согласен на обработку персональных данных</span>
           </label>
         </form>

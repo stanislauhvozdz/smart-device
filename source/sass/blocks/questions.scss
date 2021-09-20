@@ -19,6 +19,10 @@
   background-repeat: no-repeat;
   background-position: -9px 68px;
 
+  @media (max-width: 1200px) {
+    background-position: -85px 68px;
+  }
+
   @media (max-width: $desktop) {
     background-image: none;
   }
