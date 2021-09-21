@@ -33,6 +33,7 @@
   pointer-events: none;
   cursor: default;
   padding-right: 10px;
+  align-self: flex-start;
 
   @media (max-width: $tablet) {
     img {
@@ -45,12 +46,6 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: flex-end;
-  // column-gap: 88px;
-
-
   display: grid;
   grid-template-columns: repeat(2, max-content);
   grid-gap: 10px 88px;
@@ -64,13 +59,6 @@
 
 .header__item {
   direction: initial;
-  // &:not(:first-child) {
-  //   margin-left: 88px;
-
-  //   @media (max-width: $desktop) {
-  //     margin-left: 33px;
-  //   }
-  // }
 }
 
 .header__icon-link {
@@ -116,6 +104,7 @@
   text-decoration: none;
   padding-top: 5px;
   flex-shrink: 0;
+  align-self: flex-start;
 
   @media (max-width: $desktop) {
     display: none;
