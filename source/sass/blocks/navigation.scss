@@ -3,7 +3,9 @@
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // grid-template-columns: 1fr 1fr;
+  grid-template-columns: max-content 1fr;
+
   column-gap: 70px;
 
   @media (max-width: 1200px) {
